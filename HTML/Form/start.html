@@ -15,5 +15,45 @@
     </style>
   </head>
 
-  <body></body>
+  <body>
+    <form>
+      <label for="Email">Enter Your Email:</label>
+      <input type="email" name="Email" />
+      <label for="Password">Password:</label>
+      <input type="password" name="Password" />
+      <label for="FİrstName">First Name:</label>
+      <input type="text" name="FirstName" />
+      <label for="LastName">Last Name:</label>
+      <input type="text" name="LastName" />
+      <label for="BirthDate">Date Of Birth:</label>
+      <input type="date" name="BirthDate" />
+      <label for="PhoneNum">Phone Number:</label>
+      <input type="tel" name="PhoneNum" />
+      <label for="Plans">Choose Your Plan:</label>
+      <select name="Plans" id="">
+        <option value="Plans">Free Plan</option>
+        <option value="Plans">Group of 3 Plan +10$</option>
+      </select>
+      <label for="ProPlan">Pro Plan</label>
+      <input type="checkbox" name="ProPlan" checked />
+      <label for="Card">Credit Card Number:</label>
+      <input
+        name="Card"
+        type="text"
+        inputmode="numeric"
+        pattern="[0-9\s]{13,19}"
+        autocomplete="cc-number"
+        maxlength="19"
+        placeholder="xxxx xxxx xxxx xxxx"
+      />
+      <label for="CVC">CVC:</label>
+      <input type="text" inputmode="numeric" maxlength="3" minlength="3" />
+      <label for="ExpirationDate">Expiration Date</label>
+      <input type="date" name="ExpirationDate" />
+      <label for="Address">Billing Address:</label>
+      <input type="address" name="Address" />
+      <br />
+      <button>Submit</button>
+    </form>
+  </body>
 </html>

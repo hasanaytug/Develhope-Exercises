@@ -1,0 +1,18 @@
+#container {
+  border: solid 1px black;
+  width: 40vh;
+}
+
+p,
+h1,
+#links {
+  border-bottom: solid 1px black;
+  padding: 2vh 2vh;
+}
+
+#image_container {
+  background-color: rgb(131, 143, 131);
+  margin: 0px 0px;
+  padding: 0px 0px;
+  height: 200px;
+}
