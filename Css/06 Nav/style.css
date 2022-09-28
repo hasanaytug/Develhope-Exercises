@@ -67,6 +67,10 @@ body {
   display: none;
 }
 
+.dropdown:hover{
+  display: block;
+}
+
 .dropdown a {
   color: white;
 }
