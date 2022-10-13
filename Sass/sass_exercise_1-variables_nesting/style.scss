@@ -1,0 +1,23 @@
+$color-red: red;
+$color-green: green;
+$color-blue: blue;
+$border-size: 2px;
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  border: $border-size solid $color-red;
+  h1 {
+    border-bottom: $border-size solid $color-blue;
+  }
+  section {
+    display: flex;
+    article {
+      border: $border-size solid $color-green;
+      text-align: center;
+      padding: 10px;
+    }
+  }
+}
