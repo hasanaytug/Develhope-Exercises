@@ -13,15 +13,27 @@ div section {
   display: flex;
 }
 div section article {
+  color: green;
   border: 2px solid green;
+  font-size: 1rem;
   text-align: center;
   padding: 10px;
 }
 div section article:nth-child(odd) {
   color: blue;
+  border: 2px solid green;
+  font-size: 1rem;
 }
 div section article:nth-child(even) {
   color: red;
+  border: 2px solid green;
+  font-size: 1rem;
+}
+div section:last-child article {
+  margin-top: 10px;
+  color: green;
+  border: 2px solid blue;
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,8 @@
+$color-red: red;
+$color-green: green;
+$color-blue: blue;
+$border-size: 2px;
+
+@function convertToRem($num) {
+  @return calc($num/16) + rem;
+}

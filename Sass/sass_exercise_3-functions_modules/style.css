@@ -2,7 +2,7 @@ div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px;
+  padding: 1.875rem;
   border: 2px solid red;
 }
 div h1 {
@@ -13,15 +13,27 @@ div section {
   display: flex;
 }
 div section article {
-  border: 2px solid green;
+  color: green;
+  border: 0.125rem solid green;
+  font-size: 1rem;
   text-align: center;
-  padding: 10px;
+  padding: 0.625rem;
 }
 div section article:nth-child(odd) {
   color: blue;
+  border: 0.125rem solid green;
+  font-size: 1rem;
 }
 div section article:nth-child(even) {
   color: red;
+  border: 0.125rem solid green;
+  font-size: 1rem;
+}
+div section:last-child article {
+  margin-top: 0.625rem;
+  color: green;
+  border: 0.125rem solid blue;
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

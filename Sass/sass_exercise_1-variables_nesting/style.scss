@@ -11,6 +11,7 @@ div {
   border: $border-size solid $color-red;
   h1 {
     border-bottom: $border-size solid $color-blue;
+    color: $color-green;
   }
   section {
     display: flex;
@@ -18,6 +19,12 @@ div {
       border: $border-size solid $color-green;
       text-align: center;
       padding: 10px;
+      &:nth-child(odd) {
+        color: $color-blue;
+      }
+      &:nth-child(even) {
+        color: $color-red;
+      }
     }
   }
 }

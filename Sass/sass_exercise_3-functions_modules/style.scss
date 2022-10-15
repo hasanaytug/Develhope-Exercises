@@ -1,0 +1,52 @@
+@use "module.scss";
+
+@mixin article-style(
+  $color: module.$color-green,
+  $borderColor: module.$color-green,
+  $fontSize: module.convertToRem(16)
+) {
+  color: $color;
+  border: module.convertToRem(2) solid $borderColor;
+  font-size: $fontSize;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: module.convertToRem(30);
+  border: module.$border-size solid module.$color-red;
+  h1 {
+    border-bottom: module.$border-size solid module.$color-blue;
+    color: module.$color-green;
+  }
+  section {
+    display: flex;
+    article {
+      @include article-style();
+      text-align: center;
+      padding: module.convertToRem(10);
+      &:nth-child(odd) {
+        @include article-style(
+          $color: module.$color-blue,
+          $borderColor: module.$color-green,
+          $fontSize: module.convertToRem(16)
+        );
+      }
+      &:nth-child(even) {
+        @include article-style(
+          $color: module.$color-red,
+          $borderColor: module.$color-green,
+          $fontSize: module.convertToRem(16)
+        );
+      }
+    }
+    &:last-child article {
+      margin-top: module.convertToRem(10);
+      @include article-style(
+        $borderColor: module.$color-blue,
+        $fontSize: module.convertToRem(24)
+      );
+    }
+  }
+}
