@@ -1,0 +1,157 @@
+div h2, div h1 {
+  color: green;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.875rem;
+  border: 2px solid red;
+}
+div h1 {
+  border-bottom: 2px solid blue;
+}
+div h2 {
+  /*I don't understand how to use & this to style h1 or h2*/
+  padding: 1rem;
+  border: 0.125rem solid red;
+}
+div section {
+  display: flex;
+}
+div section article {
+  color: green;
+  border: 0.125rem solid green;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.625rem;
+}
+div section article:nth-child(odd) {
+  color: blue;
+  border: 0.125rem solid green;
+  font-size: 1rem;
+}
+div section article:nth-child(even) {
+  color: red;
+  border: 0.125rem solid green;
+  font-size: 1rem;
+}
+div section:last-child article {
+  margin-top: 0.625rem;
+  color: green;
+  border: 0.125rem solid blue;
+  font-size: 1.5rem;
+}
+div section:nth-child(4) {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+div section:nth-child(4) div:nth-child(1) {
+  background-color: #f2f2f2;
+  color: #0d0d0d;
+}
+div section:nth-child(4) div:nth-child(2) {
+  background-color: #e6e6e6;
+  color: #1a1a1a;
+}
+div section:nth-child(4) div:nth-child(3) {
+  background-color: #d9d9d9;
+  color: #262626;
+}
+div section:nth-child(4) div:nth-child(4) {
+  background-color: #cccccc;
+  color: #333333;
+}
+div section:nth-child(4) div:nth-child(5) {
+  background-color: #bfbfbf;
+  color: #404040;
+}
+div section:nth-child(4) div:nth-child(6) {
+  background-color: #b3b3b3;
+  color: #4d4d4d;
+}
+div section:nth-child(4) div:nth-child(7) {
+  background-color: #a6a6a6;
+  color: #595959;
+}
+div section:nth-child(4) div:nth-child(8) {
+  background-color: #999999;
+  color: #666666;
+}
+div section:nth-child(4) div:nth-child(9) {
+  background-color: #8c8c8c;
+  color: #737373;
+}
+div section:nth-child(4) div:nth-child(10) {
+  background-color: gray;
+  color: gray;
+  background-color: blue;
+  color: red;
+}
+div section:nth-child(4) div:nth-child(11) {
+  background-color: #737373;
+  color: #8c8c8c;
+}
+div section:nth-child(4) div:nth-child(12) {
+  background-color: #666666;
+  color: #999999;
+}
+div section:nth-child(4) div:nth-child(13) {
+  background-color: #595959;
+  color: #a6a6a6;
+}
+div section:nth-child(4) div:nth-child(14) {
+  background-color: #4d4d4d;
+  color: #b3b3b3;
+}
+div section:nth-child(4) div:nth-child(15) {
+  background-color: #404040;
+  color: #bfbfbf;
+}
+div section:nth-child(4) div:nth-child(16) {
+  background-color: #333333;
+  color: #cccccc;
+}
+div section:nth-child(4) div:nth-child(17) {
+  background-color: #262626;
+  color: #d9d9d9;
+}
+div section:nth-child(4) div:nth-child(18) {
+  background-color: #1a1a1a;
+  color: #e6e6e6;
+}
+div section:nth-child(4) div:nth-child(19) {
+  background-color: #0d0d0d;
+  color: #f2f2f2;
+}
+div .fs-1rem {
+  padding: 0;
+  font-size: 1rem;
+  margin-top: 0.625rem;
+  height: 2.8125rem;
+  width: 2.8125rem;
+  display: flex;
+  align-items: start;
+}
+div .fs-2rem {
+  padding: 0;
+  font-size: 2rem;
+  margin-top: 0.625rem;
+  height: 2.8125rem;
+  width: 2.8125rem;
+  display: flex;
+  align-items: start;
+}
+div .fs-3rem {
+  padding: 0;
+  font-size: 3rem;
+  margin-top: 0.625rem;
+  height: 2.8125rem;
+  width: 2.8125rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+/*# sourceMappingURL=style.css.map */
