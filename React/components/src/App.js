@@ -6,3 +6,5 @@ class App extends React.Component {
     return <Hello />;
   }
 }
+
+export default App;
