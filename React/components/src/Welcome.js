@@ -6,7 +6,7 @@ class Welcome extends React.Component {
     return (
       <>
         <p>Welcome {this.props.name}!</p>
-        {this.props.age > 15 ? <Age age={this.props.age} /> : null}
+        {this.props.age !== undefined ? <Age age={this.props.age} /> : null}
       </>
     );
   }
