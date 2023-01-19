@@ -1,66 +1,40 @@
-import React from "react";
+import React, { createRef } from "react";
 
 export class Login extends React.Component {
-  state = {
-    name: "",
-    password: "",
-    checked: false,
-    isDisabled: true,
-  };
+  _formRef = createRef();
 
-  constructor(props) {
-    super(props);
-  }
-
-  inputHandler = (e) => {
-    const inputType = e.target.type;
-    this.setState({
-      name: inputType === "text" ? e.target.value : this.state.name,
-      password: inputType === "password" ? e.target.value : this.state.password,
-      checked: inputType === "checkbox" ? e.target.checked : this.state.checked,
+  handleSubmit = (e) => {
+    e.preventDefault();
+    const form = this._formRef.current;
+    console.log({
+      name: form.name.value,
+      password: form.password.value,
+      remember: form.remember.checked,
     });
   };
 
-  handleReset = () => {
-    this.setState({
-      name: "",
-      password: "",
-      checked: false,
-      isDisabled: true,
-    });
+  handleChange = (e) => {
+    if (
+      this._formRef.current.name.value &&
+      this._formRef.current.password.value
+    ) {
+      this._formRef.current.login.disabled = false;
+    }
+    return;
   };
 
   render() {
     return (
       <>
-        <input
-          onFocus={this.handleFocused}
-          onChange={this.inputHandler}
-          name="name"
-          type="text"
-          value={this.state.name}
-        />
-        <input
-          onChange={this.inputHandler}
-          name="password"
-          type="password"
-          value={this.state.password}
-        />
-        <input
-          onChange={this.inputHandler}
-          name="remember"
-          type="checkbox"
-          checked={this.state.checked}
-        />
-        <button
-          onClick={() => {
-            this.props.onLogin(this.state);
-          }}
-          disabled={this.state.name && this.state.password ? false : true}
-        >
-          Login
-        </button>
-        <button onClick={this.handleReset}>Reset</button>
+        <form ref={this._formRef} onSubmit={this.handleSubmit} action="">
+          <input name="name" type="text" onChange={this.handleChange} />
+          <input name="password" type="password" onChange={this.handleChange} />
+          <input name="remember" type="checkbox" />
+          <button name="login" type="submit" disabled="true">
+            Login
+          </button>
+          <button type="reset">Reset</button>
+        </form>
       </>
     );
   }
