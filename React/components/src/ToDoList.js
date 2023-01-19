@@ -15,6 +15,14 @@ export class ToDoList extends React.Component {
   handleReset = () => {
     this.setState({ items: [] });
   };
+  handleDeleteItem = (item) => {
+    const filteredItems = this.state.items.filter((note) => {
+      return item != note;
+    });
+    this.setState({
+      items: filteredItems,
+    });
+  };
 
   render() {
     return (
@@ -26,7 +34,18 @@ export class ToDoList extends React.Component {
         />
         <ul>
           {this.state.items.map((item) => {
-            return <li>{item}</li>;
+            return (
+              <div>
+                <li>{item}</li>
+                <button
+                  onClick={() => {
+                    this.handleDeleteItem(item);
+                  }}
+                >
+                  Delete
+                </button>
+              </div>
+            );
           })}
         </ul>
         <button onClick={this.handleClick}>Add</button>
