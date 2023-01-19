@@ -12,6 +12,9 @@ export class ToDoList extends React.Component {
     this.setState({ items: [...this.state.items, this.state.note] });
     this.setState({ note: "" });
   };
+  handleReset = () => {
+    this.setState({ items: [] });
+  };
 
   render() {
     return (
@@ -27,6 +30,7 @@ export class ToDoList extends React.Component {
           })}
         </ul>
         <button onClick={this.handleClick}>Add</button>
+        <button onClick={this.handleReset}>Reset</button>
       </>
     );
   }
