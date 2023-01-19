@@ -21,6 +21,15 @@ export class Login extends React.Component {
     });
   };
 
+  handleReset = () => {
+    this.setState({
+      name: "",
+      password: "",
+      checked: false,
+      isDisabled: true,
+    });
+  };
+
   render() {
     return (
       <>
@@ -51,6 +60,7 @@ export class Login extends React.Component {
         >
           Login
         </button>
+        <button onClick={this.handleReset}>Reset</button>
       </>
     );
   }
