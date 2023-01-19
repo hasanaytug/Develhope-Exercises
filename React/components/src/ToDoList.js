@@ -10,6 +10,7 @@ export class ToDoList extends React.Component {
   };
   handleClick = () => {
     this.setState({ items: [...this.state.items, this.state.note] });
+    this.setState({ note: "" });
   };
 
   render() {
