@@ -27,7 +27,12 @@ export class Login extends React.Component {
     return (
       <>
         <form ref={this._formRef} onSubmit={this.handleSubmit} action="">
-          <input name="name" type="text" onChange={this.handleChange} />
+          <input
+            autoFocus="true"
+            name="name"
+            type="text"
+            onChange={this.handleChange}
+          />
           <input name="password" type="password" onChange={this.handleChange} />
           <input name="remember" type="checkbox" />
           <button name="login" type="submit" disabled="true">
