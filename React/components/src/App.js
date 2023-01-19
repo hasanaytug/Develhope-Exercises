@@ -6,6 +6,7 @@ import ClickCounter from "./ClickCounter.js";
 import ClickTracker from "./ClickTracker.js";
 import { InteractiveWelcome } from "./InteractiveWelcome.js";
 import { Login } from "./Login.js";
+import { ToDoList } from "./ToDoList";
 
 class App extends React.Component {
   onLogin = (data) => {
@@ -15,7 +16,7 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <Login onLogin={this.onLogin} />
+        <ToDoList />
       </>
     );
   }
