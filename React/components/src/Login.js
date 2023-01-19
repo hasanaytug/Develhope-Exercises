@@ -5,7 +5,13 @@ export class Login extends React.Component {
     name: "",
     password: "",
     checked: false,
+    isDisabled: true,
   };
+
+  constructor(props) {
+    super(props);
+  }
+
   inputHandler = (e) => {
     const inputType = e.target.type;
     this.setState({
@@ -14,10 +20,12 @@ export class Login extends React.Component {
       checked: inputType === "checkbox" ? e.target.checked : this.state.checked,
     });
   };
+
   render() {
     return (
       <>
         <input
+          onFocus={this.handleFocused}
           onChange={this.inputHandler}
           name="name"
           type="text"
@@ -35,6 +43,14 @@ export class Login extends React.Component {
           type="checkbox"
           checked={this.state.checked}
         />
+        <button
+          onClick={() => {
+            this.props.onLogin(this.state);
+          }}
+          disabled={this.state.name && this.state.password ? false : true}
+        >
+          Login
+        </button>
       </>
     );
   }

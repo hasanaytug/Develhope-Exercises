@@ -8,10 +8,14 @@ import { InteractiveWelcome } from "./InteractiveWelcome.js";
 import { Login } from "./Login.js";
 
 class App extends React.Component {
+  onLogin = (data) => {
+    console.log(data);
+  };
+
   render() {
     return (
       <>
-        <Login />
+        <Login onLogin={this.onLogin} />
       </>
     );
   }
