@@ -7,6 +7,7 @@ import ClickTracker from "./ClickTracker.js";
 import { InteractiveWelcome } from "./InteractiveWelcome.js";
 import { Login } from "./Login.js";
 import { ToDoList } from "./ToDoList";
+import { Container } from "./Container";
 
 class App extends React.Component {
   onLogin = (data) => {
@@ -15,9 +16,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <>
+      <Container>
         <Login />
-      </>
+      </Container>
     );
   }
 }
