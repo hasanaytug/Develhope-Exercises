@@ -2,3 +2,11 @@
   background-color: aqua;
   border: 2px solid black;
 }
+
+.green-button {
+  background-color: greenyellow;
+}
+
+.red-button {
+  background-color: red;
+}
