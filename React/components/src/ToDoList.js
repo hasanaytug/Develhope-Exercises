@@ -15,9 +15,9 @@ export class ToDoList extends React.Component {
   handleReset = () => {
     this.setState({ items: [] });
   };
-  handleDeleteItem = (item) => {
+  handleDeleteItems = (e) => {
     const filteredItems = this.state.items.filter((note) => {
-      return item != note;
+      return e.target.id != note;
     });
     this.setState({
       items: filteredItems,
@@ -32,22 +32,7 @@ export class ToDoList extends React.Component {
           value={this.state.note}
           type="text"
         />
-        <ul>
-          {this.state.items.map((item) => {
-            return (
-              <div>
-                <li>{item}</li>
-                <button
-                  onClick={() => {
-                    this.handleDeleteItem(item);
-                  }}
-                >
-                  Delete
-                </button>
-              </div>
-            );
-          })}
-        </ul>
+        <ul>{this.props.render(this.state.items, this.handleDeleteItems)}</ul>
         <button onClick={this.handleClick}>Add</button>
         <button onClick={this.handleReset}>Reset</button>
       </>

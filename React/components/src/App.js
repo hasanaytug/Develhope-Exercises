@@ -13,12 +13,24 @@ class App extends React.Component {
   onLogin = (data) => {
     console.log(data);
   };
-
   render() {
     return (
-      <Container title={"Title"}>
-        <Login />
-      </Container>
+      <ToDoList
+        render={(items, handleDeleteItems) => {
+          return items.map((item) => {
+            return (
+              <div key={Math.floor(Math.random() * 1000)}>
+                <li>
+                  {item}&nbsp;&nbsp;
+                  <button id={item} onClick={handleDeleteItems}>
+                    Delete
+                  </button>
+                </li>
+              </div>
+            );
+          });
+        }}
+      ></ToDoList>
     );
   }
 }
