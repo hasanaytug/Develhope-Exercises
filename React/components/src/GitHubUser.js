@@ -6,15 +6,18 @@ function GitHubUser({ username }) {
 
   async function fetchUserData(username) {
     try {
+      setError(null);
       const responce = await fetch(`https://api.github.com/users/${username}`);
       if (responce.status !== 200) {
         setError("Error");
+        setUser(null);
       }
       const json = await responce.json();
 
       setUser(json);
     } catch (err) {
       setError(err);
+      setUser(null);
     }
   }
   useEffect(() => {
