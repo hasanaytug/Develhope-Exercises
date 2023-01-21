@@ -13,8 +13,11 @@ import { DisplayLanguage } from "./DisplayLanguage";
 import Sum from "./Sum";
 
 class App extends React.Component {
+  onLogin = (data) => {
+    console.log(data);
+  };
   render() {
-    return <ClickCounter></ClickCounter>;
+    return <Login onLogin={this.onLogin}></Login>;
   }
 }
 
