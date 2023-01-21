@@ -18,7 +18,7 @@ function App() {
   };
   return (
     <div>
-      <ClickCounter onCounterChange={onCounterChange}></ClickCounter>
+      <Counter initValue={0} incInterval={1000} incAmount={1} />
     </div>
   );
 }
