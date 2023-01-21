@@ -8,29 +8,32 @@ import { InteractiveWelcome } from "./InteractiveWelcome.js";
 import { Login } from "./Login.js";
 import { ToDoList } from "./ToDoList";
 import { Container } from "./Container";
+import LanguageContext from "./LanguageContext";
+import { DisplayLanguage } from "./DisplayLanguage";
 
 class App extends React.Component {
   onLogin = (data) => {
     console.log(data);
   };
+
+  state = {
+    language: "en",
+  };
+
+  handleChange = (e) => {
+    this.setState({ language: e.target.value });
+  };
   render() {
     return (
-      <ToDoList
-        render={(items, handleDeleteItems) => {
-          return items.map((item) => {
-            return (
-              <div key={Math.floor(Math.random() * 1000)}>
-                <li>
-                  {item}&nbsp;&nbsp;
-                  <button id={item} onClick={handleDeleteItems}>
-                    Delete
-                  </button>
-                </li>
-              </div>
-            );
-          });
-        }}
-      ></ToDoList>
+      <LanguageContext.Provider value={this.state.language}>
+        <div>
+          <select value={this.state.language} onChange={this.handleChange}>
+            <option value="en">English</option>
+            <option value="tr">Turkish</option>
+          </select>
+          <DisplayLanguage />
+        </div>
+      </LanguageContext.Provider>
     );
   }
 }
