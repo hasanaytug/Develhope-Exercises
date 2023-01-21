@@ -10,10 +10,11 @@ import { ToDoList } from "./ToDoList";
 import { Container } from "./Container";
 import LanguageContext from "./LanguageContext";
 import { DisplayLanguage } from "./DisplayLanguage";
+import Sum from "./Sum";
 
 class App extends React.Component {
   render() {
-    return <Welcome name={"Hasan"} age={34}></Welcome>;
+    return <Sum nums={[1, 2, 3, 4, 5]}></Sum>;
   }
 }
 
