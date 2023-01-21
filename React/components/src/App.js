@@ -14,7 +14,7 @@ import Sum from "./Sum";
 
 class App extends React.Component {
   render() {
-    return <Sum nums={[1, 2, 3, 4, 5]}></Sum>;
+    return <Sum></Sum>;
   }
 }
 
