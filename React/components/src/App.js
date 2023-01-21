@@ -11,6 +11,7 @@ import { Container } from "./Container";
 import LanguageContext from "./LanguageContext";
 import { DisplayLanguage } from "./DisplayLanguage";
 import Sum from "./Sum";
+import GitHubUser from "./GitHubUser.js";
 
 function App() {
   const onCounterChange = (count) => {
@@ -18,7 +19,7 @@ function App() {
   };
   return (
     <div>
-      <Counter initValue={0} incInterval={1000} incAmount={1} />
+      <GitHubUser username={"hasanaytug"} />
     </div>
   );
 }
