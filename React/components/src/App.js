@@ -14,7 +14,7 @@ import Sum from "./Sum";
 
 class App extends React.Component {
   render() {
-    return <Sum></Sum>;
+    return <ClickCounter></ClickCounter>;
   }
 }
 
