@@ -12,6 +12,7 @@ import LanguageContext from "./LanguageContext";
 import { DisplayLanguage } from "./DisplayLanguage";
 import Sum from "./Sum";
 import GitHubUser from "./GitHubUser.js";
+import GitHubUserList from "./GitHubUserList.js";
 
 function App() {
   const onCounterChange = (count) => {
@@ -19,7 +20,7 @@ function App() {
   };
   return (
     <div>
-      <GitHubUser username={"hasanaytug"} />
+      <GitHubUserList />
     </div>
   );
 }
