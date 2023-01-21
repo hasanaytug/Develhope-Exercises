@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-export default function ClickCounter() {
+export default function ClickCounter({ onCounterChange }) {
   const [counter, setCounter] = useState(0);
+
+  useEffect(() => {
+    onCounterChange(counter);
+  }, [counter]);
   const handleButton = () => {
     setCounter((counter) => counter + 1);
   };

@@ -12,13 +12,15 @@ import LanguageContext from "./LanguageContext";
 import { DisplayLanguage } from "./DisplayLanguage";
 import Sum from "./Sum";
 
-class App extends React.Component {
-  onLogin = (data) => {
-    console.log(data);
+function App() {
+  const onCounterChange = (count) => {
+    console.log(`The counter is at: ${count}`);
   };
-  render() {
-    return <Login onLogin={this.onLogin}></Login>;
-  }
+  return (
+    <div>
+      <ClickCounter onCounterChange={onCounterChange}></ClickCounter>
+    </div>
+  );
 }
 
 export default App;
