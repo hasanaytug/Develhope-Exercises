@@ -20,7 +20,7 @@ function App() {
   };
   return (
     <div>
-      <ClickCounter />
+      <Login />
     </div>
   );
 }
