@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useContext } from "react";
 import LanguageContext from "./LanguageContext";
 
 const dict = {
@@ -6,18 +6,13 @@ const dict = {
   tr: "Merhaba",
 };
 
-export class DisplayLanguage extends Component {
-  render() {
-    return (
-      <div>
-        <LanguageContext.Consumer>
-          {(language) => {
-            return <h1>{dict[language]}</h1>;
-          }}
-        </LanguageContext.Consumer>
-      </div>
-    );
-  }
+function DisplayLanguage() {
+  const language = useContext(LanguageContext);
+  return (
+    <div>
+      <h1>{dict[language]}</h1>;
+    </div>
+  );
 }
 
 export default DisplayLanguage;

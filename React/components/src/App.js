@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Hello from "./Hello.js";
 import Welcome from "./Welcome.js";
 import Counter from "./Counter.js";
@@ -9,22 +9,27 @@ import { Login } from "./Login.js";
 import { ToDoList } from "./ToDoList";
 import { Container } from "./Container";
 import LanguageContext from "./LanguageContext";
-import { DisplayLanguage } from "./DisplayLanguage";
+import DisplayLanguage from "./DisplayLanguage";
 import Sum from "./Sum";
 import GitHubUser from "./GitHubUser.js";
 import GitHubUserList from "./GitHubUserList.js";
 import CarDetails from "./CarDetails.js";
 
 function App() {
-  const initialData = {
-    model: "Mustang",
-    year: "1967",
-    color: "red",
+  const [language, setLanguage] = useState("en");
+  const handleChange = (e) => {
+    setLanguage(e.target.value);
   };
   return (
-    <div>
-      <CarDetails initialData={initialData} />
-    </div>
+    <LanguageContext.Provider value={language}>
+      <div>
+        <select value={language} onChange={handleChange}>
+          <option value="en">English</option>
+          <option value="tr">Turkish</option>
+        </select>
+        <DisplayLanguage />
+      </div>
+    </LanguageContext.Provider>
   );
 }
 
