@@ -13,14 +13,17 @@ import { DisplayLanguage } from "./DisplayLanguage";
 import Sum from "./Sum";
 import GitHubUser from "./GitHubUser.js";
 import GitHubUserList from "./GitHubUserList.js";
+import CarDetails from "./CarDetails.js";
 
 function App() {
-  const onCounterChange = (count) => {
-    console.log(`The counter is at: ${count}`);
+  const initialData = {
+    model: "Mustang",
+    year: "1967",
+    color: "red",
   };
   return (
     <div>
-      <GitHubUser username={"hasanaytug"} />
+      <CarDetails initialData={initialData} />
     </div>
   );
 }
