@@ -20,17 +20,7 @@ function App() {
   const handleChange = (e) => {
     setLanguage(e.target.value);
   };
-  return (
-    <LanguageContext.Provider value={language}>
-      <div>
-        <select value={language} onChange={handleChange}>
-          <option value="en">English</option>
-          <option value="tr">Turkish</option>
-        </select>
-        <DisplayLanguage />
-      </div>
-    </LanguageContext.Provider>
-  );
+  return <ClickCounter></ClickCounter>;
 }
 
 export default App;
