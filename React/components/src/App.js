@@ -15,15 +15,18 @@ import GitHubUser from "./GitHubUser.js";
 import GitHubUserList from "./GitHubUserList.js";
 import CarDetails from "./CarDetails.js";
 import FilteredList from "./FilteredList.js";
+import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 
 function App() {
-  const users = [
-    { name: "John", email: "john@somemail.com", age: 25 },
-    { name: "Mary", email: "mary@somemail.com", age: 16 },
-    { name: "Steve", email: "steve@somemail.com", age: 22 },
-    { name: "Nick", email: "nick@somemail.com", age: 19 },
-  ];
-  return <FilteredList users={users} />;
+  return (
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Welcome name={"hasan"} />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;
