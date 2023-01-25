@@ -1,7 +1,9 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import useGitHubUser from "./useGitHubUser";
 
-function GitHubUser({ username }) {
+function GitHubUser() {
+  const { username } = useParams();
   const { user, error, loading } = useGitHubUser(username);
 
   return (

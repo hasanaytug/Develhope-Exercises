@@ -27,6 +27,7 @@ function App() {
             path="/counter"
             element={<Counter initValue={0} incInterval={1000} incAmount={1} />}
           />
+          <Route path="users/:username" element={<GitHubUser />} />
         </Routes>
       </BrowserRouter>
     </div>
