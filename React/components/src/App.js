@@ -24,7 +24,7 @@ function App() {
       <BrowserRouter>
         <Link to="/">Homepage</Link>
         <Link to="/counter">Counter</Link>
-        <Link to="/users/hasanaytug">User Page</Link>
+        <Link to="/users">User Page</Link>
         <Routes>
           <Route path="*" element={<NotFound></NotFound>} />
           <Route path="/" element={<Welcome name={"hasan"} />} />
@@ -33,7 +33,9 @@ function App() {
             path="/counter"
             element={<Counter initValue={0} incInterval={1000} incAmount={1} />}
           />
-          <Route path="users/:username" element={<GitHubUser />} />
+          <Route path="users" element={<GitHubUserList />}>
+            <Route path=":username" element={<GitHubUser />}></Route>
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>
