@@ -16,6 +16,7 @@ import GitHubUserList from "./GitHubUserList.js";
 import CarDetails from "./CarDetails.js";
 import FilteredList from "./FilteredList.js";
 import { BrowserRouter, Link, Route, Router, Routes } from "react-router-dom";
+import NotFound from "./NotFound.js";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Link to="/counter">Counter</Link>
         <Link to="/users/hasanaytug">User Page</Link>
         <Routes>
+          <Route path="*" element={<NotFound></NotFound>} />
           <Route path="/" element={<Welcome name={"hasan"} />} />
 
           <Route
