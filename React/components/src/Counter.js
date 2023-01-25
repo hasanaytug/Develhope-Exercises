@@ -3,14 +3,11 @@ import CounterDisplay from "./CounterDisplay";
 
 function Counter({ initValue, incInterval, incAmount }) {
   const [counter, setCounter] = useState(initValue);
-
   useEffect(() => {
-    const myInterval = setInterval(() => {
-      setCounter(counter + incAmount);
+    const counterInverval = setInterval(() => {
+      setCounter((prev) => prev + 1);
     }, incInterval);
-    return () => {
-      clearInterval(myInterval);
-    };
+    return () => clearInterval(counterInverval);
   }, []);
 
   return (

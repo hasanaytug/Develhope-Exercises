@@ -23,6 +23,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Welcome name={"hasan"} />} />
+          <Route
+            path="/counter"
+            element={<Counter initValue={0} incInterval={1000} incAmount={1} />}
+          />
         </Routes>
       </BrowserRouter>
     </div>
