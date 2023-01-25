@@ -15,14 +15,18 @@ import GitHubUser from "./GitHubUser.js";
 import GitHubUserList from "./GitHubUserList.js";
 import CarDetails from "./CarDetails.js";
 import FilteredList from "./FilteredList.js";
-import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import { BrowserRouter, Link, Route, Router, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div>
       <BrowserRouter>
+        <Link to="/">Homepage</Link>
+        <Link to="/counter">Counter</Link>
+        <Link to="/users/hasanaytug">User Page</Link>
         <Routes>
           <Route path="/" element={<Welcome name={"hasan"} />} />
+
           <Route
             path="/counter"
             element={<Counter initValue={0} incInterval={1000} incAmount={1} />}

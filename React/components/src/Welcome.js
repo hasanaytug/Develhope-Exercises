@@ -1,5 +1,6 @@
 import React from "react";
 import Age from "./Age";
+import { Link } from "react-router-dom";
 
 function Welcome({ name, age }) {
   return (
