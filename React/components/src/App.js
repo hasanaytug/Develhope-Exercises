@@ -35,6 +35,7 @@ function App() {
           />
           <Route path="users" element={<GitHubUserList />}>
             <Route path=":username" element={<GitHubUser />}></Route>
+            <Route index element={<h3>Add and Select a User</h3>}></Route>
           </Route>
         </Routes>
       </BrowserRouter>
