@@ -15,9 +15,6 @@ import GitHubUser from "./GitHubUser.js";
 import GitHubUserList from "./GitHubUserList.js";
 
 function App() {
-  const onCounterChange = (count) => {
-    console.log(`The counter is at: ${count}`);
-  };
   return (
     <div>
       <GitHubUser username={"hasanaytug"} />

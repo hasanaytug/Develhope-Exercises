@@ -2,12 +2,12 @@ import React from "react";
 import useGitHubUser from "./useGitHubUser";
 
 function GitHubUser({ username }) {
-  const { user, error, loading } = useGitHubUser(username);
+  const { data, error } = useGitHubUser(username);
 
   return (
     <div>
-      {loading && <h1>{loading}</h1>}
-      {user && <h1>{user.login}</h1>}
+      {!data && !error && <h1>Loading...</h1>}
+      {data && <h1>Username is: {data.login}</h1>}
       {error && <h1>Something went wrong</h1>}
     </div>
   );
