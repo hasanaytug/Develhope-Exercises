@@ -4,8 +4,10 @@ import useSWR from "swr";
 export default function useGitHubUser(username) {
   const fetchData = (url) => fetch(url).then((response) => response.json());
 
+  const shouldFetch = username !== null ? true : false;
+
   const { data, error } = useSWR(
-    `https://api.github.com/users/${username}`,
+    shouldFetch ? `https://api.github.com/users/${username}` : null,
     fetchData
   );
 
