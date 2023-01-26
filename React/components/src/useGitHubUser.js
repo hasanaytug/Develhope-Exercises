@@ -6,13 +6,18 @@ export default function useGitHubUser(username) {
 
   const shouldFetch = username !== null ? true : false;
 
-  const { data, error } = useSWR(
+  const { data, error, mutate } = useSWR(
     shouldFetch ? `https://api.github.com/users/${username}` : null,
     fetchData
   );
 
+  function reFetch() {
+    mutate();
+  }
+
   return {
-    data: data,
-    error: error,
+    data,
+    error,
+    reFetch,
   };
 }
