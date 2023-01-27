@@ -17,7 +17,7 @@ class App extends React.Component {
     console.log(data);
   };
   render() {
-    return <Login onLogin={this.onLogin}></Login>;
+    return <ClickCounter></ClickCounter>;
   }
 }
 
