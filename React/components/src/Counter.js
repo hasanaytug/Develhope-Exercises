@@ -7,11 +7,14 @@ class Counter extends React.Component {
     this.state = {
       counter: initValue,
     };
+  }
+  // We need the constructor for , props
+  componentDidMount() {
     setInterval(() => {
       this.setState({
-        counter: this.state.counter + incAmount,
+        counter: this.state.counter + this.props.incAmount,
       });
-    }, incInterval);
+    }, this.props.incInterval);
   }
 
   render() {
